@@ -1,0 +1,46 @@
+body {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: .5s linear;
+    animation: animationBlock 3s linear infinite;
+}
+
+.box:hover {
+    background: green;
+}
+
+@media(max-width:767px) {
+    body {
+        flex-direction: column;
+        height: 100vh;
+        color: black;
+    }
+
+    .box {
+        background: blue;
+    }
+}
+
+@keyframes animationBlock {
+    0% {
+        width: 100px;
+    }
+
+    50% {
+        margin-top: 200px;
+        width: 300px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        width: 100px;
+   
